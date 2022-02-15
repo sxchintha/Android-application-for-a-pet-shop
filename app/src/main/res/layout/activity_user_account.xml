@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAccount">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/ProName"
+        android:layout_width="364dp"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/ProNic"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="NIC  :"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProName" />
+
+    <TextView
+        android:id="@+id/proNic"
+        android:layout_width="153dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="@string/AccPhone"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProName" />
+
+    <TextView
+        android:id="@+id/proNic2"
+        android:layout_width="144dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="132dp"
+        android:gravity="center"
+        android:text="@string/AccEmail"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textColor="#FF809B"
+        android:background="@drawable/rose_border_button"
+        android:id="@+id/DeleteAccBtn"
+        android:layout_width="178dp"
+        android:layout_height="38dp"
+        android:onClick="deletUser"
+        android:text="@string/DeleteAcctxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/UpdateAccBtn"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proNic2"
+        app:layout_constraintVertical_bias="0.182" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textColor="#FF809B"
+        android:background="@drawable/rose_border_button"
+        android:id="@+id/UpdateAccBtn"
+        android:layout_width="172dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="updateUser"
+        android:text="@string/UpdateAcctxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proNic2"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/MakeAdBtn"
+        android:layout_width="196dp"
+        android:layout_height="69dp"
+        android:background="@drawable/rose_border_button"
+        android:onClick="advertise"
+        android:text="@string/MakeAdtxt"
+        android:textColor="#FF809B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proNic2"
+        app:layout_constraintVertical_bias="0.544" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="204dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="513dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/unnamed" />
+
+    <TextView
+        android:id="@+id/profileNic"
+        android:layout_width="154dp"
+        android:layout_height="34dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ProNic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/ProNic" />
+
+    <TextView
+        android:id="@+id/profileNum"
+        android:layout_width="154dp"
+        android:layout_height="32dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/proNic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/proNic" />
+
+    <TextView
+        android:id="@+id/profileEmail"
+        android:layout_width="154dp"
+        android:layout_height="35dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/proNic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/proNic2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
